@@ -1,8 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ChatWebSocket.WebSocketConnection0
-    - Lobby.Lobby
+    - login.LoginS
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -25,7 +24,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Assignment Week4/Scene/Lobby.unity:
+    Assets/Assignment Week5/Scene/Login.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -47,23 +46,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11232}
     - Class: 114
-      Script: {instanceID: 11252}
+      Script: {instanceID: 11254}
     - Class: 114
       Script: {instanceID: 11452}
     - Class: 114
       Script: {instanceID: 11840}
     - Class: 114
-      Script: {instanceID: 11890}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12228}
+      Script: {instanceID: 12230}
     - Class: 114
-      Script: {instanceID: 12300}
-    - Class: 114
-      Script: {instanceID: 12420}
+      Script: {instanceID: 12422}
     - Class: 114
       Script: {instanceID: 12716}
     - Class: 114
-      Script: {instanceID: 13070}
+      Script: {instanceID: 13068}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,12 +126,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: LobbyRoomExample
-    className: LobbyManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -311,6 +302,12 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 020ab04ae3c156e8796254b4da28319c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: login
+    className: LoginS
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -371,7 +368,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 2e8506b90ba2ac3290ce283982365883
+      Hash: 7f1d9dce3317a5406dd3d62fdac5c44f
     assemblyName: Assembly-CSharp.dll
     namespaceName: ChatWebSocketWithJson
     className: WebSocketConnection
@@ -485,12 +482,6 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Example
-  - hash:
-      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -557,5 +548,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
-  - Assets/Assignment Week4/Scene/Lobby.unity
-  playerPath: D:/SourceTree/Git1610700898_GI455/GI455_1610700898/MiniUi/Lobby/MiniUi.exe
+  - Assets/Assignment Week5/Scene/Login.unity
+  playerPath: D:/SourceTree/Git1610700898_GI455/GI455_1610700898/MiniUi/Login/MiniUi.exe

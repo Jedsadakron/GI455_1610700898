@@ -51,6 +51,7 @@ namespace ChatWebSocket
         private WebSocket ws;
 
         private string tempMessageString;
+        private string _roomname;
 
         public delegate void DelegateHandle(SocketEvent result);
         public DelegateHandle OnCreateRoom;
@@ -98,13 +99,10 @@ namespace ChatWebSocket
             }*/
 
             SocketEvent socketEvent = new SocketEvent("CreateRoom", inputroomnameuser.text);
-
-            
-
+                 
             string toJsonStr = JsonUtility.ToJson(socketEvent);
           
             ws.Send(toJsonStr);
-
 
         }
 
@@ -126,16 +124,6 @@ namespace ChatWebSocket
 
         public void JoinRoom(string roomName)
         {
-            afterjoinroom.SetActive(true);
-            createandjoin.SetActive(false);
-
-            roomnameui.text = ("Room : " + inputroomnameuser.text);
-
-            /*if (inputroomnameuser.text != null)
-            {
-                failpopup.SetActive(true);
-            }*/
-
 
             SocketEvent socketEvent = new SocketEvent("JoinRoom", inputroomnameuser.text);
 
@@ -143,14 +131,12 @@ namespace ChatWebSocket
 
             ws.Send(toJsonStr);
 
-            //userroomnameText.text = ("Room : " + inputroomnameuser);
+            afterjoinroom.SetActive(true);
+            createandjoin.SetActive(false);
+
+            roomnameui.text = ("Room : " + inputroomnameuser.text);
 
         }
-
-        /*public void JoinRoomUI()
-        {
-
-        }*/
 
         public void LeaveRoom()
         {
@@ -195,12 +181,10 @@ namespace ChatWebSocket
 
         private void OnDestroy()
         {
-            //Disconnect();
             if (ws != null)
             {
                 ws.Close();
             }
-
         }
 
         private void UpdateNotifyMessage()
@@ -228,11 +212,11 @@ namespace ChatWebSocket
                         OnJoinRoom(receiveMessageData);
                     if (receiveMessageData.data != "fail")
                     {
-                        failpopup.SetActive(false);
+                        failpopup.SetActive(true);
                     }
                     else
                     {
-                       failpopup.SetActive(true);
+                       failpopup.SetActive(false);
                     }
                 }
                 else if (receiveMessageData.eventName == "LeaveRoom")

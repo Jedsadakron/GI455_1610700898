@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Assignment Week4/Scene/Lobby.unity
+- path: Assets/Assignment Week5/Scene/Login.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
