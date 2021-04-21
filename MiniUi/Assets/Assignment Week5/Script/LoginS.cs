@@ -321,6 +321,9 @@ namespace login
             string toJsonStr = JsonUtility.ToJson(socketEvent);
 
             ws.Send(toJsonStr);
+
+            textOwner.text = "";
+            textReceive.text = "";
         }
 
         public void Quit()

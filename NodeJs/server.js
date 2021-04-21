@@ -20,6 +20,8 @@ var roomList = [];
 }
 */
 
+var roomMap = new Map();
+
 let db = new sqlite3.Database('./userdatabase/loginDB.db', sqlite3.OPEN_CREATE | sqlite3.OPEN_READWRITE, (err)=>
 {
     if(err) throw err;
@@ -375,4 +377,3 @@ let db = new sqlite3.Database('./userdatabase/loginDB.db', sqlite3.OPEN_CREATE |
     
     
 });
-
